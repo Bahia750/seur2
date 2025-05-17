@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seguimiento de Paquetes SEUR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & tipografía */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    body { background: #f9f9f9; color: #333; }
+
+    /* Colores SEUR */
+    :root {
+      --seur-orange: #FF4F00;
+      --seur-blue:   #005FA8;
+      --seur-gray:   #e6e6e6;
+    }
+
+    /* Cabecera superior */
+    .top-header {
+      background: var(--seur-orange);
+      padding: 8px 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .top-header .nav-link {
+      color: #fff;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    /* Navegación principal */
+    .main-nav {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--seur-gray);
+    }
+    .logo { height: 32px; margin-right: 40px; }
+    .nav-list { display: flex; gap: 24px; }
+    .nav-item { color: var(--seur-blue); font-weight: 500; font-size: 15px; }
+    .nav-item:hover { text-decoration: underline; }
+
+    /* Hero */
+    .hero { background: #fff; text-align: center; padding: 60px 20px; margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .hero .headline { font-size: 2rem; color: var(--seur-blue); margin-bottom: 16px; }
+    .track-form { display: inline-flex; max-width: 600px; width: 100%; }
+    .track-input {
+      flex: 1;
+      padding: 12px 16px;
+      font-size: 16px;
+      border: 1px solid var(--seur-gray);
+      border-radius: 4px 0 0 4px;
+    }
+    .btn-primary {
+      background: var(--seur-orange);
+      border: none;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+    .subtext { margin-top: 8px; font-size: 0.9rem; color: #666; }
+
+    /* Panel de acciones */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .action-card {
+      flex: 1;
+      min-width: 200px;
+      background: #fff;
+      border: 1px solid var(--seur-gray);
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .action-card .icon { font-size: 1.8rem; color: var(--seur-blue); }
+    .action-card h3 { font-size: 1rem; color: var(--seur-blue); margin-bottom: 4px; }
+    .action-card p { font-size: 0.85rem; color: #666; }
+
+    /* Servicios */
+    .services { padding: 40px 20px; text-align: center; background: #fff; }
+    .section-title { font-size: 1.8rem; margin-bottom: 24px; color: var(--seur-blue); }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .service-item { background: #fff; padding: 16px; border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .service-item .emoji { font-size: 2rem; margin-bottom: 8px; color: var(--seur-orange); }
+    .service-item h3 { font-size: 1rem; color: var(--seur-dark); margin-bottom: 4px; }
+    .service-item p { font-size: 0.85rem; color: #666; }
+
+    /* Pie de página */
+    .footer { background: #fff; padding: 20px; margin-top: 20px; border-top: 1px solid var(--seur-gray); text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <a href="#" class="nav-link">Ayuda</a>
+    <a href="#" class="nav-link">Iniciar sesión</a>
+  </header>
+  <nav class="main-nav">
+    <img src="https://www.seur.com/images/logo.png" alt="Logo" class="logo" />
+    <ul class="nav-list">
+      <li><a href="#" class="nav-item">Seguimiento</a></li>
+      <li><a href="#" class="nav-item">Enviar</a></li>
+      <li><a href="#" class="nav-item">Ubicaciones</a></li>
+      <li><a href="#" class="nav-item">Soluciones</a></li>
+      <li><a href="#" class="nav-item">Asistencia</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1 class="headline">Rastrea tu envío</h1>
+      <form class="track-form" action="./page2.html" method="get">
+        <input type="text" name="trackingNumber" value="GYT456X4R" placeholder="Introduce el número de seguimiento" class="track-input" required />
+        <button type="submit" class="btn-primary">Rastrear</button>
+      </form>
+      <p class="subtext">Consulta en tiempo real con SEUR</p>
+    </section>
+
+    <!-- Panel de acciones SEUR -->
+    <section class="actions">
+      <div class="action-card">
+        <span class="icon">📦</span>
+        <div>
+          <h3>Enviar tu paquete</h3>
+          <p>Destinos nacionales e internacionales</p>
+        </div>
+      </div>
+      <div class="action-card">
+        <span class="icon">📍</span>
+        <div>
+          <h3>Sigue tu envío</h3>
+          <p>Consulta o modifica tu envío</p>
+        </div>
+      </div>
+      <div class="action-card">
+        <span class="icon">🏪</span>
+        <div>
+          <h3>Puntos Pickup</h3>
+          <p>Encuentra tu punto más cercano</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="service-grid">
+        <div class="service-item"><span class="emoji">✈️</span><h3>Exprés</h3><p>Entrega urgente</p></div>
+        <div class="service-item"><span class="emoji">🚚</span><h3>Terrestre</h3><p>Envíos regionales</p></div>
+        <div class="service-item"><span class="emoji">📦</span><h3>Carga</h3><p>Transporte de mercancías</p></div>
+        <div class="service-item"><span class="emoji">🌐</span><h3>Internacional</h3><p>Soporte aduanero</p></div>
+        <div class="service-item"><span class="emoji">⚡</span><h3>En el día</h3><p>Entregas locales</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 SEUR. Todos los derechos reservados.</footer>
+</body>
+</html>

